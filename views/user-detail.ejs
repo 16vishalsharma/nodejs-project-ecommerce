@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+<div class="card">
+    <h1>User Details</h1>
+    <div style="margin-bottom: 1rem;">
+        <a href="/users" class="btn btn-secondary">Back to Users</a>
+        <a href="/users/<%= user._id %>/edit" class="btn">Edit User</a>
+    </div>
+    
+    <table>
+        <tr>
+            <th>First Name</th>
+            <td><%= user.firstName %></td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td><%= user.lastName %></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><%= user.email %></td>
+        </tr>
+        <tr>
+            <th>Role</th>
+            <td>
+                <span style="background: <%= user.role === 'admin' ? '#dc3545' : user.role === 'moderator' ? '#ffc107' : '#667eea' %>; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.9rem; text-transform: uppercase;">
+                    <%= user.role || 'user' %>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><%= user.age || 'N/A' %></td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td><%= user.phone || 'N/A' %></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>
+                <% if (user.address) { %>
+                    <%= user.address.street || '' %> <%= user.address.city || '' %> <%= user.address.state || '' %> 
+                    <%= user.address.zipCode || '' %> <%= user.address.country || '' %>
+                <% } else { %>
+                    N/A
+                <% } %>
+            </td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>
+                <span style="color: <%= user.isActive ? 'green' : 'red' %>">
+                    <%= user.isActive ? 'Active' : 'Inactive' %>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th>Created At</th>
+            <td><%= new Date(user.createdAt).toLocaleString() %></td>
+        </tr>
+        <tr>
+            <th>Updated At</th>
+            <td><%= new Date(user.updatedAt).toLocaleString() %></td>
+        </tr>
+    </table>
+</div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>
+

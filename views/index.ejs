@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'E-commerce API' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+        <div class="card">
+            <h1>Welcome to E-commerce API</h1>
+            <p>This is a full-stack Node.js application with MongoDB, featuring server-side rendering and RESTful APIs.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h2>Users Management</h2>
+                    <p>Create, read, update, and delete users with full CRUD operations.</p>
+                    <a href="/users" class="btn">View Users</a>
+                </div>
+                
+                <div class="card">
+                    <h2>URL Shortener</h2>
+                    <p>Shorten any URL and track clicks with analytics.</p>
+                    <a href="/url-shortener" class="btn">Shorten URL</a>
+                </div>
+                
+                <div class="card">
+                    <h2>API Documentation</h2>
+                    <p>Explore all available API endpoints and their usage.</p>
+                    <a href="/api" class="btn">View API Docs</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Quick Stats</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3><%= stats?.users || 0 %></h3>
+                    <p>Total Users</p>
+                </div>
+                <div class="stat-card">
+                    <h3><%= stats?.urls || 0 %></h3>
+                    <p>Shortened URLs</p>
+                </div>
+                <div class="stat-card">
+                    <h3><%= stats?.clicks || 0 %></h3>
+                    <p>Total Clicks</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

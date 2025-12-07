@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+        <div class="card">
+            <h1>Our Products</h1>
+            
+            <!-- Category Filter -->
+            <div style="margin-bottom: 2rem;">
+                <a href="/products" class="btn <%= !selectedCategory ? 'btn-secondary' : '' %>" style="margin-right: 0.5rem; margin-bottom: 0.5rem; display: inline-block;">All</a>
+                <% if (categories && categories.length > 0) { %>
+                    <% categories.forEach(cat => { %>
+                        <% 
+                            const catSlug = cat.slug || cat.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                            const isSelected = selectedCategory && selectedCategory._id && cat._id && selectedCategory._id.toString() === cat._id.toString();
+                        %>
+                        <a href="/products?category=<%= catSlug %>" 
+                           class="btn <%= isSelected ? 'btn-secondary' : '' %>"
+                           style="margin-right: 0.5rem; margin-bottom: 0.5rem; display: inline-block;">
+                            <%= cat.name %>
+                        </a>
+                    <% }); %>
+                <% } else { %>
+                    <p style="color: #666;">No categories available.</p>
+                <% } %>
+            </div>
+
+            <% if (selectedCategory) { %>
+                <h2><%= selectedCategory.name %></h2>
+            <% } %>
+
+            <% if (products && products.length > 0) { %>
+                <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                    <% products.forEach(product => { %>
+                        <div class="card" style="padding: 1rem;">
+                            <% if (product.featured) { %>
+                                <span style="background: #667eea; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.5rem; display: inline-block;">Featured</span>
+                            <% } %>
+                            <h3 style="margin: 0.5rem 0; color: #333;"><%= product.name %></h3>
+                            <p style="color: #666; font-size: 0.9rem; margin: 0.5rem 0; min-height: 40px;">
+                                <%= product.description.length > 80 ? product.description.substring(0, 80) + '...' : product.description %>
+                            </p>
+                            <div style="margin: 1rem 0;">
+                                <span style="font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                                    $<%= product.price.toFixed(2) %>
+                                </span>
+                                <% if (product.compareAtPrice && product.compareAtPrice > product.price) { %>
+                                    <span style="text-decoration: line-through; color: #999; margin-left: 0.5rem;">
+                                        $<%= product.compareAtPrice.toFixed(2) %>
+                                    </span>
+                                <% } %>
+                            </div>
+                            <div style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">
+                                <strong>Category:</strong> <%= product.category.name %><br>
+                                <strong>Stock:</strong> <%= product.stock.quantity %> units<br>
+                                <% if (product.rating && product.rating.count > 0) { %>
+                                    <strong>Rating:</strong> ⭐ <%= product.rating.average.toFixed(1) %> (<%= product.rating.count %> reviews)
+                                <% } %>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <a href="/api/products/<%= product._id %>" class="btn" style="width: 100%;">View Details</a>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            <% } else { %>
+                <p>No products found in this category.</p>
+            <% } %>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>
+

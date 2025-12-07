@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+        <div class="card">
+            <h1>Welcome, <%= userName || 'User' %>!</h1>
+            <p>This is your dashboard. You are successfully logged in.</p>
+            
+            <div style="margin: 1rem 0;">
+                <form action="/logout" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>User Profile</h2>
+                <p>View and manage your profile information.</p>
+                <a href="/users/<%= userId %>" class="btn">View Profile</a>
+            </div>
+            
+            <div class="card">
+                <h2>Users Management</h2>
+                <p>Manage all users in the system.</p>
+                <a href="/users" class="btn">Manage Users</a>
+            </div>
+            
+            <div class="card">
+                <h2>URL Shortener</h2>
+                <p>Create and manage shortened URLs.</p>
+                <a href="/url-shortener" class="btn">Shorten URL</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Quick Stats</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3><%= stats?.users || 0 %></h3>
+                    <p>Total Users</p>
+                </div>
+                <div class="stat-card">
+                    <h3><%= stats?.urls || 0 %></h3>
+                    <p>Shortened URLs</p>
+                </div>
+                <div class="stat-card">
+                    <h3><%= stats?.clicks || 0 %></h3>
+                    <p>Total Clicks</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>
+

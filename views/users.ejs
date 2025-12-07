@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+        <div class="card">
+            <h1>Users Management</h1>
+            <a href="/users/create" class="btn">Create New User</a>
+        </div>
+
+        <div class="card">
+            <h2>All Users</h2>
+            <% if (users && users.length > 0) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Age</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach(user => { %>
+                            <tr>
+                                <td><%= user.firstName %> <%= user.lastName %></td>
+                                <td><%= user.email %></td>
+                                <td>
+                                    <span style="background: <%= user.role === 'admin' ? '#dc3545' : user.role === 'moderator' ? '#ffc107' : '#667eea' %>; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase;">
+                                        <%= user.role || 'user' %>
+                                    </span>
+                                </td>
+                                <td><%= user.age || 'N/A' %></td>
+                                <td><%= user.phone || 'N/A' %></td>
+                                <td>
+                                    <span style="color: <%= user.isActive ? 'green' : 'red' %>">
+                                        <%= user.isActive ? 'Active' : 'Inactive' %>
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="/users/<%= user._id %>" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View</a>
+                                    <a href="/users/<%= user._id %>/edit" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Edit</a>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <p>No users found. <a href="/users/create">Create your first user</a>.</p>
+            <% } %>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

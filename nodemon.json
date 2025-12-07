@@ -1,0 +1,28 @@
+{
+  "watch": [
+    "server.js",
+    "config",
+    "controllers",
+    "models",
+    "routes",
+    "middleware",
+    "views",
+    "public"
+  ],
+  "ext": "js,ejs,json",
+  "ignore": [
+    "node_modules",
+    "*.log",
+    ".git",
+    "public/js/*.min.js",
+    "public/css/*.min.css"
+  ],
+  "exec": "node server.js",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "delay": 1000,
+  "verbose": true,
+  "legacyWatch": false
+}
+

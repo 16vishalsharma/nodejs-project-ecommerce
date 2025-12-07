@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+<div class="card">
+    <h1>API Documentation</h1>
+    <p>Complete API reference for all available endpoints.</p>
+</div>
+
+<div class="card">
+    <h2>User Endpoints</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>POST</td>
+                <td>/api/users</td>
+                <td>Create a new user</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/users</td>
+                <td>Get all users</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/users/:id</td>
+                <td>Get single user by ID</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/api/users/:id</td>
+                <td>Update user by ID (full update)</td>
+            </tr>
+            <tr>
+                <td>PATCH</td>
+                <td>/api/users/:id</td>
+                <td>Update user by ID (partial update)</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/api/users/:id</td>
+                <td>Delete user by ID</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card">
+    <h2>URL Shortener Endpoints</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>POST</td>
+                <td>/api/urls</td>
+                <td>Create a short URL</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/urls</td>
+                <td>Get all shortened URLs</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/urls/:id</td>
+                <td>Get single URL by ID</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/urls/stats/:shortCode</td>
+                <td>Get URL statistics by short code</td>
+            </tr>
+            <tr>
+                <td>PATCH</td>
+                <td>/api/urls/:id</td>
+                <td>Update URL (activate/deactivate, set expiration)</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/api/urls/:id</td>
+                <td>Delete URL</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/s/:shortCode</td>
+                <td>Redirect to original URL</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card">
+    <h2>Example Requests</h2>
+    <h3>Create User</h3>
+    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;">
+POST /api/users
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "age": 30
+}
+    </pre>
+
+    <h3>Create Short URL</h3>
+    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;">
+POST /api/urls
+Content-Type: application/json
+
+{
+  "originalUrl": "https://www.example.com/very/long/url",
+  "customCode": "my-link",
+  "expiresInDays": 7
+}
+    </pre>
+</div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>
+

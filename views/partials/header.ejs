@@ -1,0 +1,26 @@
+<header>
+    <nav class="container">
+        <div class="logo">
+            <a href="/">E-commerce API</a>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <% if (typeof session !== 'undefined' && session.userId) { %>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/users">Users</a></li>
+                <li><a href="/url-shortener">URL Shortener</a></li>
+                <li><a href="/api">API Docs</a></li>
+                <li style="color: rgba(255,255,255,0.8);">(<%= session.userRole || 'user' %>)</li>
+                <li>
+                    <form action="/logout" method="POST" style="display: inline;">
+                        <button type="submit" style="background: none; border: none; color: white; cursor: pointer; font-size: inherit;">Logout</button>
+                    </form>
+                </li>
+            <% } else { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

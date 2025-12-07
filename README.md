@@ -1,6 +1,21 @@
-# E-commerce Node.js API Project
+# Node.js E-commerce Project
 
 A scalable Node.js project with Express and MongoDB, featuring a clean MVC architecture with full CRUD operations. Built for e-commerce applications with support for Users, Products, Categories, and Orders.
+
+## 🚀 Features
+
+- ✅ **MVC Architecture** - Clean separation of concerns
+- ✅ **MongoDB Integration** - Mongoose ODM with multiple schemas
+- ✅ **JWT Authentication** - Token-based API authentication
+- ✅ **Session Authentication** - For web views
+- ✅ **Server-Side Rendering** - EJS templates with layouts
+- ✅ **RESTful API** - Full CRUD operations
+- ✅ **URL Shortener** - With click tracking and analytics
+- ✅ **Role-Based Access** - User roles (user, moderator, admin)
+- ✅ **Product Management** - E-commerce ready with categories
+- ✅ **Protected Routes** - Authentication middleware
+- ✅ **Error Handling** - Global error handler
+- ✅ **Nodemon** - Auto-reload in development
 
 ## Prerequisites
 

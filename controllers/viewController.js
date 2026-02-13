@@ -2,6 +2,7 @@ const User = require('../models/User');
 const Url = require('../models/Url');
 const Product = require('../models/Product');
 const Category = require('../models/Category');
+const Blog = require('../models/Blog');
 const asyncHandler = require('../middleware/asyncHandler');
 
 // Helper function to render views with layout
@@ -229,7 +230,7 @@ exports.getDashboard = asyncHandler(async (req, res) => {
   const totalClicks = await Url.aggregate([
     { $group: { _id: null, total: { $sum: '$clicks' } } },
   ]);
-  
+
   const stats = {
     users: userCount,
     urls: urlCount,
@@ -242,5 +243,230 @@ exports.getDashboard = asyncHandler(async (req, res) => {
     userId: req.session.userId,
     stats,
   });
+});
+
+// @desc    Get all blogs page
+// @route   GET /blogs
+// @access  Public
+exports.getBlogs = asyncHandler(async (req, res) => {
+  const blogs = await Blog.find({ status: 'published' })
+    .sort({ publishedAt: -1 })
+    .limit(20);
+  renderView(res, 'blogs', { title: 'Blogs', blogs });
+});
+
+// @desc    Get create blog form
+// @route   GET /blogs/create
+// @access  Public
+exports.getCreateBlog = asyncHandler(async (req, res) => {
+  renderView(res, 'blog-form', { title: 'Create Blog', isEdit: false, blog: {} });
+});
+
+// @desc    Create blog (form submission)
+// @route   POST /blogs
+// @access  Public
+exports.createBlog = asyncHandler(async (req, res) => {
+  const {
+    title,
+    content,
+    excerpt,
+    bloggerName,
+    bloggerEmail,
+    bloggerPassword,
+    bloggerBio,
+    bloggerAvatar,
+    bloggerWebsite,
+    bloggerTwitter,
+    bloggerLinkedin,
+    bloggerGithub,
+    tags,
+    status,
+    featuredImage,
+  } = req.body;
+
+  const blog = await Blog.create({
+    title,
+    content,
+    excerpt,
+    blogger: {
+      name: bloggerName,
+      email: bloggerEmail,
+      password: bloggerPassword,
+      bio: bloggerBio,
+      avatar: bloggerAvatar,
+      website: bloggerWebsite,
+      socialLinks: {
+        twitter: bloggerTwitter,
+        linkedin: bloggerLinkedin,
+        github: bloggerGithub,
+      },
+    },
+    tags: tags ? tags.split(',').map(tag => tag.trim()) : [],
+    status: status || 'draft',
+    featuredImage,
+  });
+
+  res.redirect(`/blogs/${blog._id}`);
+});
+
+// @desc    Get single blog page
+// @route   GET /blogs/:id
+// @access  Public
+exports.getBlog = asyncHandler(async (req, res) => {
+  const blog = await Blog.findById(req.params.id);
+
+  if (!blog) {
+    return res.status(404).render('error', {
+      title: 'Blog Not Found',
+      error: 'Blog not found',
+    });
+  }
+
+  renderView(res, 'blog-detail', { title: blog.title, blog });
+});
+
+// @desc    Get edit blog form
+// @route   GET /blogs/:id/edit
+// @access  Private (Blogger only)
+exports.getEditBlog = asyncHandler(async (req, res) => {
+  const blog = await Blog.findById(req.params.id);
+
+  if (!blog) {
+    return res.status(404).render('error', {
+      title: 'Blog Not Found',
+      error: 'Blog not found',
+    });
+  }
+
+  // Check if blogger is logged in and owns this blog
+  if (!req.session.bloggerId || req.session.bloggerId.toString() !== blog._id.toString()) {
+    return res.status(403).render('error', {
+      title: 'Access Denied',
+      error: 'You must be logged in as the blog owner to edit this blog',
+    });
+  }
+
+  renderView(res, 'blog-form', { title: 'Edit Blog', isEdit: true, blog });
+});
+
+// @desc    Update blog (form submission)
+// @route   PUT /blogs/:id
+// @access  Private (Blogger only)
+exports.updateBlog = asyncHandler(async (req, res) => {
+  const {
+    title,
+    content,
+    excerpt,
+    bloggerName,
+    bloggerEmail,
+    bloggerPassword,
+    bloggerBio,
+    bloggerAvatar,
+    bloggerWebsite,
+    bloggerTwitter,
+    bloggerLinkedin,
+    bloggerGithub,
+    tags,
+    status,
+    featuredImage,
+  } = req.body;
+
+  const blog = await Blog.findById(req.params.id);
+
+  if (!blog) {
+    return res.status(404).render('error', {
+      title: 'Blog Not Found',
+      error: 'Blog not found',
+    });
+  }
+
+  // Check if blogger is logged in and owns this blog
+  if (!req.session.bloggerId || req.session.bloggerId.toString() !== blog._id.toString()) {
+    return res.status(403).render('error', {
+      title: 'Access Denied',
+      error: 'You must be logged in as the blog owner to update this blog',
+    });
+  }
+
+  // Update blog fields
+  blog.title = title;
+  blog.content = content;
+  blog.excerpt = excerpt;
+  blog.blogger.name = bloggerName;
+  blog.blogger.email = bloggerEmail;
+  blog.blogger.bio = bloggerBio;
+  blog.blogger.avatar = bloggerAvatar;
+  blog.blogger.website = bloggerWebsite;
+  blog.blogger.socialLinks = {
+    twitter: bloggerTwitter,
+    linkedin: bloggerLinkedin,
+    github: bloggerGithub,
+  };
+  blog.tags = tags ? tags.split(',').map(tag => tag.trim()) : [];
+  blog.status = status || 'draft';
+  blog.featuredImage = featuredImage;
+
+  // Only update password if provided
+  if (bloggerPassword) {
+    blog.blogger.password = bloggerPassword;
+  }
+
+  await blog.save();
+
+  res.redirect(`/blogs/${blog._id}`);
+});
+
+// @desc    Get blogger login page
+// @route   GET /blogger/login
+// @access  Public
+exports.getBloggerLogin = asyncHandler(async (req, res) => {
+  if (req.session.bloggerId) {
+    return res.redirect('/blogs');
+  }
+  renderView(res, 'blogger-login', { title: 'Blogger Login' });
+});
+
+// @desc    Blogger login (form submission)
+// @route   POST /blogger/login
+// @access  Public
+exports.bloggerLogin = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  // Find blog by blogger email
+  const blog = await Blog.findOne({ 'blogger.email': email.toLowerCase() });
+
+  if (!blog) {
+    return renderView(res, 'blogger-login', {
+      title: 'Blogger Login',
+      error: 'Invalid email or password',
+    });
+  }
+
+  // Verify password
+  const isMatch = blog.verifyPassword(password);
+
+  if (!isMatch) {
+    return renderView(res, 'blogger-login', {
+      title: 'Blogger Login',
+      error: 'Invalid email or password',
+    });
+  }
+
+  // Set session
+  req.session.bloggerId = blog._id;
+  req.session.bloggerEmail = blog.blogger.email;
+  req.session.bloggerName = blog.blogger.name;
+
+  res.redirect('/blogs');
+});
+
+// @desc    Blogger logout
+// @route   POST /blogger/logout
+// @access  Private
+exports.bloggerLogout = asyncHandler(async (req, res) => {
+  req.session.bloggerId = null;
+  req.session.bloggerEmail = null;
+  req.session.bloggerName = null;
+  res.redirect('/blogs');
 });
 

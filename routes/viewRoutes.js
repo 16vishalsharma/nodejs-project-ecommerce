@@ -12,6 +12,15 @@ const {
   getApiDocs,
   getDashboard,
   getProducts,
+  getBlogs,
+  getCreateBlog,
+  createBlog,
+  getBlog,
+  getEditBlog,
+  updateBlog,
+  getBloggerLogin,
+  bloggerLogin,
+  bloggerLogout,
 } = require('../controllers/viewController');
 const { isAuthenticated, getCurrentUser } = require('../middleware/auth');
 
@@ -40,6 +49,19 @@ router.get('/products', getProducts);
 
 // API Documentation route
 router.get('/api', getApiDocs);
+
+// Blog routes (public)
+router.get('/blogs', getBlogs);
+router.get('/blogs/create', getCreateBlog);
+router.post('/blogs', createBlog);
+router.get('/blogs/:id', getBlog);
+router.get('/blogs/:id/edit', getEditBlog);
+router.put('/blogs/:id', updateBlog);
+
+// Blogger auth routes
+router.get('/blogger/login', getBloggerLogin);
+router.post('/blogger/login', bloggerLogin);
+router.post('/blogger/logout', bloggerLogout);
 
 module.exports = router;
 

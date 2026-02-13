@@ -11,7 +11,6 @@ router.use('/users', userRoutes);
 router.use('/urls', urlRoutes);
 router.use('/products', productRoutes);
 
-// Add more routes here as you create them
 // router.use('/categories', categoryRoutes);
 // router.use('/orders', orderRoutes);
 

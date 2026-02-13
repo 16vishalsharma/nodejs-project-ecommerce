@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h1>Blogs</h1>
+        <a href="/blogs/create" class="btn">Create New Blog</a>
+    </div>
+
+    <% if (blogs && blogs.length > 0) { %>
+        <div class="blog-list">
+            <% blogs.forEach(blog => { %>
+                <div class="blog-card" style="border: 1px solid #ddd; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+                    <% if (blog.featuredImage) { %>
+                        <img src="<%= blog.featuredImage %>" alt="<%= blog.title %>" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+                    <% } %>
+
+                    <h2 style="margin-bottom: 0.5rem;">
+                        <a href="/blogs/<%= blog._id %>" style="text-decoration: none; color: inherit;">
+                            <%= blog.title %>
+                        </a>
+                    </h2>
+
+                    <div class="blog-meta" style="color: #666; font-size: 0.9rem; margin-bottom: 0.75rem;">
+                        <span>By <strong><%= blog.blogger.name %></strong></span>
+                        <span> | </span>
+                        <span><%= blog.publishedAt ? new Date(blog.publishedAt).toLocaleDateString() : new Date(blog.createdAt).toLocaleDateString() %></span>
+                    </div>
+
+                    <% if (blog.excerpt) { %>
+                        <p style="color: #444; margin-bottom: 1rem;"><%= blog.excerpt %></p>
+                    <% } %>
+
+                    <% if (blog.tags && blog.tags.length > 0) { %>
+                        <div class="tags" style="margin-bottom: 1rem;">
+                            <% blog.tags.forEach(tag => { %>
+                                <span style="background: #e0e0e0; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;"><%= tag %></span>
+                            <% }) %>
+                        </div>
+                    <% } %>
+
+                    <a href="/blogs/<%= blog._id %>" class="btn btn-secondary">Read More</a>
+                </div>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <p>No blogs found. <a href="/blogs/create">Create your first blog post!</a></p>
+    <% } %>
+</div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

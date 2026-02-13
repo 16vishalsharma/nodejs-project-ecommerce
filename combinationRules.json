@@ -1,0 +1,2914 @@
+[
+  {
+    "useCases": [
+      "Competitor Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Networking"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Market Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Networking"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Networking"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Networking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Strategic Partnerships",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Co-Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Competitor Analysis",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Networking"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Networking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Strategic Partnerships",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Co-Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Find Investors",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Strategic Partnerships"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Networking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Strategic Partnerships",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Co-Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Market Research",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Market Researcher"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Find Co-Investors"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Strategic Partnerships",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Co-Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Networking",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Find Investment Opportunities"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Co-Investors",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Founder/CXO"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Strategic Partnerships",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities",
+      "Track Portfolio Companies"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Find Investment Opportunities",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Co-Investors",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Track Portfolio Companies",
+      "Investment Tracking"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Track Portfolio Companies",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Track Portfolio Companies",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Find Investment Opportunities",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Investment Tracking",
+      "Lead Generation & Account Research"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Investment Tracking",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Investment Tracking",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Track Portfolio Companies",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Lead Generation & Account Research",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Investor"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Investment Tracking",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research",
+      "Market Landscape Analysis",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Lead Generation & Account Research",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  },
+  {
+    "useCases": [
+      "Market Landscape Analysis",
+      "Trend Spotting & Innovation Discovery",
+      "Sales Lead Generation"
+    ],
+    "icp": "Sales & Marketing Professional"
+  }
+]

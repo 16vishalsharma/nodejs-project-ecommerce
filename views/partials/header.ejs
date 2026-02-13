@@ -6,6 +6,18 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/products">Products</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+            <li><a href="/upload">Upload</a></li>
+            <% if (typeof session !== 'undefined' && session.bloggerId) { %>
+                <li style="color: rgba(255,255,255,0.8);">(Blogger: <%= session.bloggerName %>)</li>
+                <li>
+                    <form action="/blogger/logout" method="POST" style="display: inline;">
+                        <button type="submit" style="background: none; border: none; color: white; cursor: pointer; font-size: inherit;">Blogger Logout</button>
+                    </form>
+                </li>
+            <% } else { %>
+                <li><a href="/blogger/login">Blogger Login</a></li>
+            <% } %>
             <% if (typeof session !== 'undefined' && session.userId) { %>
                 <li><a href="/dashboard">Dashboard</a></li>
                 <li><a href="/users">Users</a></li>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+<div class="card">
+    <h1>File Upload</h1>
+    <p style="color: #666; margin-bottom: 1rem;">Handled by Worker: <strong><%= workerId %></strong></p>
+
+    <div style="display: grid; gap: 2rem;">
+        <!-- Single File Upload -->
+        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
+            <h2>Single File Upload</h2>
+            <p style="color: #666; margin-bottom: 1rem;">Max 10MB</p>
+            <form id="singleUploadForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" id="singleFile" name="file" required>
+                </div>
+                <button type="submit" class="btn">Upload File</button>
+            </form>
+            <div id="singleResult" style="margin-top: 1rem;"></div>
+        </div>
+
+        <!-- Multiple Files Upload -->
+        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
+            <h2>Multiple Files Upload</h2>
+            <p style="color: #666; margin-bottom: 1rem;">Max 10 files, 10MB each</p>
+            <form id="multipleUploadForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" id="multipleFiles" name="files" multiple required>
+                </div>
+                <button type="submit" class="btn">Upload Files</button>
+            </form>
+            <div id="multipleResult" style="margin-top: 1rem;"></div>
+        </div>
+
+        <!-- Large File Upload -->
+        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
+            <h2>Large File Upload</h2>
+            <p style="color: #666; margin-bottom: 1rem;">Max 100MB (for videos)</p>
+            <form id="largeUploadForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" id="largeFile" name="file" required>
+                </div>
+                <button type="submit" class="btn">Upload Large File</button>
+            </form>
+            <div id="largeResult" style="margin-top: 1rem;"></div>
+        </div>
+    </div>
+
+    <hr style="margin: 2rem 0;">
+
+    <h2>Uploaded Files</h2>
+    <button id="refreshFiles" class="btn btn-secondary" style="margin-bottom: 1rem;">Refresh List</button>
+    <div id="filesList"></div>
+</div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script>
+        // Single file upload
+        document.getElementById('singleUploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('file', document.getElementById('singleFile').files[0]);
+
+            try {
+                const response = await fetch('/upload/single', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                document.getElementById('singleResult').innerHTML = response.ok
+                    ? `<div class="alert alert-success">Uploaded! Worker: ${data.workerId}<br>Path: ${data.file.path}</div>`
+                    : `<div class="alert alert-error">${data.error}</div>`;
+            } catch (err) {
+                document.getElementById('singleResult').innerHTML = `<div class="alert alert-error">${err.message}</div>`;
+            }
+        });
+
+        // Multiple files upload
+        document.getElementById('multipleUploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            const files = document.getElementById('multipleFiles').files;
+            for (let i = 0; i < files.length; i++) {
+                formData.append('files', files[i]);
+            }
+
+            try {
+                const response = await fetch('/upload/multiple', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                document.getElementById('multipleResult').innerHTML = response.ok
+                    ? `<div class="alert alert-success">Uploaded ${data.files.length} files! Worker: ${data.workerId}</div>`
+                    : `<div class="alert alert-error">${data.error}</div>`;
+            } catch (err) {
+                document.getElementById('multipleResult').innerHTML = `<div class="alert alert-error">${err.message}</div>`;
+            }
+        });
+
+        // Large file upload
+        document.getElementById('largeUploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('file', document.getElementById('largeFile').files[0]);
+
+            try {
+                const response = await fetch('/upload/large', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                document.getElementById('largeResult').innerHTML = response.ok
+                    ? `<div class="alert alert-success">Uploaded! Worker: ${data.workerId}<br>Path: ${data.file.path}</div>`
+                    : `<div class="alert alert-error">${data.error}</div>`;
+            } catch (err) {
+                document.getElementById('largeResult').innerHTML = `<div class="alert alert-error">${err.message}</div>`;
+            }
+        });
+
+        // Refresh files list
+        async function loadFiles() {
+            try {
+                const response = await fetch('/upload/files');
+                const data = await response.json();
+                if (data.success) {
+                    const html = data.files.length > 0
+                        ? `<p>Worker: ${data.workerId} | Total: ${data.count} files</p>
+                           <ul style="list-style: none; padding: 0;">
+                             ${data.files.map(f => `
+                               <li style="padding: 0.5rem; border-bottom: 1px solid #eee;">
+                                 <a href="${f.path}" target="_blank">${f.name}</a>
+                                 <span style="color: #666; font-size: 0.9rem;"> (${(f.size / 1024).toFixed(2)} KB)</span>
+                               </li>
+                             `).join('')}
+                           </ul>`
+                        : '<p>No files uploaded yet.</p>';
+                    document.getElementById('filesList').innerHTML = html;
+                }
+            } catch (err) {
+                document.getElementById('filesList').innerHTML = `<div class="alert alert-error">${err.message}</div>`;
+            }
+        }
+
+        document.getElementById('refreshFiles').addEventListener('click', loadFiles);
+        loadFiles();
+    </script>
+</body>
+</html>

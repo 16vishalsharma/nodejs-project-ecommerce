@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= blog.title %> - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof success !== 'undefined' && success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } %>
+
+<div class="card">
+    <div style="margin-bottom: 1rem;">
+        <a href="/blogs" style="text-decoration: none;">&larr; Back to Blogs</a>
+    </div>
+
+    <% if (blog.featuredImage) { %>
+        <img src="<%= blog.featuredImage %>" alt="<%= blog.title %>" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+    <% } %>
+
+    <h1 style="margin-bottom: 0.5rem;"><%= blog.title %></h1>
+
+    <div class="blog-meta" style="color: #666; font-size: 0.9rem; margin-bottom: 1.5rem;">
+        <span>Published on <%= blog.publishedAt ? new Date(blog.publishedAt).toLocaleDateString() : new Date(blog.createdAt).toLocaleDateString() %></span>
+        <% if (blog.status === 'draft') { %>
+            <span style="background: #ffc107; color: #000; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">Draft</span>
+        <% } %>
+    </div>
+
+    <% if (blog.tags && blog.tags.length > 0) { %>
+        <div class="tags" style="margin-bottom: 1.5rem;">
+            <% blog.tags.forEach(tag => { %>
+                <span style="background: #e0e0e0; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;"><%= tag %></span>
+            <% }) %>
+        </div>
+    <% } %>
+
+    <div class="blog-content" style="line-height: 1.8; margin-bottom: 2rem;">
+        <%- blog.content.replace(/\n/g, '<br>') %>
+    </div>
+
+    <hr style="margin: 2rem 0;">
+
+    <div class="blogger-info" style="display: flex; gap: 1.5rem; background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
+        <% if (blog.blogger.avatar) { %>
+            <img src="<%= blog.blogger.avatar %>" alt="<%= blog.blogger.name %>" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+        <% } else { %>
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #666;">
+                <%= blog.blogger.name.charAt(0).toUpperCase() %>
+            </div>
+        <% } %>
+
+        <div>
+            <h3 style="margin: 0 0 0.5rem 0;">About the Author</h3>
+            <p style="font-weight: bold; margin: 0 0 0.25rem 0;"><%= blog.blogger.name %></p>
+            <p style="color: #666; margin: 0 0 0.5rem 0;"><%= blog.blogger.email %></p>
+
+            <% if (blog.blogger.bio) { %>
+                <p style="margin: 0.5rem 0;"><%= blog.blogger.bio %></p>
+            <% } %>
+
+            <div class="social-links" style="margin-top: 0.75rem;">
+                <% if (blog.blogger.website) { %>
+                    <a href="<%= blog.blogger.website %>" target="_blank" style="margin-right: 1rem;">Website</a>
+                <% } %>
+                <% if (blog.blogger.socialLinks?.twitter) { %>
+                    <a href="<%= blog.blogger.socialLinks.twitter.startsWith('http') ? blog.blogger.socialLinks.twitter : 'https://twitter.com/' + blog.blogger.socialLinks.twitter.replace('@', '') %>" target="_blank" style="margin-right: 1rem;">Twitter</a>
+                <% } %>
+                <% if (blog.blogger.socialLinks?.linkedin) { %>
+                    <a href="<%= blog.blogger.socialLinks.linkedin %>" target="_blank" style="margin-right: 1rem;">LinkedIn</a>
+                <% } %>
+                <% if (blog.blogger.socialLinks?.github) { %>
+                    <a href="<%= blog.blogger.socialLinks.github.startsWith('http') ? blog.blogger.socialLinks.github : 'https://github.com/' + blog.blogger.socialLinks.github.replace('@', '') %>" target="_blank" style="margin-right: 1rem;">GitHub</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+        <% if (typeof session !== 'undefined' && session.bloggerId && session.bloggerId.toString() === blog._id.toString()) { %>
+            <a href="/blogs/<%= blog._id %>/edit" class="btn">Edit Blog</a>
+        <% } %>
+        <a href="/blogs" class="btn btn-secondary">Back to Blogs</a>
+    </div>
+</div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

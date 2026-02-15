@@ -21,6 +21,8 @@ const {
   getBloggerLogin,
   bloggerLogin,
   bloggerLogout,
+  getNewsPage,
+  getNewsDetailPage,
 } = require('../controllers/viewController');
 const { isAuthenticated, getCurrentUser } = require('../middleware/auth');
 
@@ -62,6 +64,10 @@ router.put('/blogs/:id', updateBlog);
 router.get('/blogger/login', getBloggerLogin);
 router.post('/blogger/login', bloggerLogin);
 router.post('/blogger/logout', bloggerLogout);
+
+// News routes (public)
+router.get('/news', getNewsPage);
+router.get('/news/:id', getNewsDetailPage);
 
 module.exports = router;
 

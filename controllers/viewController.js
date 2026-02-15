@@ -3,6 +3,7 @@ const Url = require('../models/Url');
 const Product = require('../models/Product');
 const Category = require('../models/Category');
 const Blog = require('../models/Blog');
+const News = require('../models/News');
 const asyncHandler = require('../middleware/asyncHandler');
 
 // Helper function to render views with layout
@@ -468,5 +469,43 @@ exports.bloggerLogout = asyncHandler(async (req, res) => {
   req.session.bloggerEmail = null;
   req.session.bloggerName = null;
   res.redirect('/blogs');
+});
+
+// @desc    Get all news page
+// @route   GET /news
+// @access  Public
+exports.getNewsPage = asyncHandler(async (req, res) => {
+  const { topic } = req.query;
+  const query = {};
+
+  if (topic) {
+    query.topic = topic.toLowerCase();
+  }
+
+  const newsList = await News.find(query)
+    .sort({ publishedAt: -1 })
+    .limit(50);
+
+  renderView(res, 'news', {
+    title: 'News',
+    newsList,
+    currentTopic: topic || '',
+  });
+});
+
+// @desc    Get single news page
+// @route   GET /news/:id
+// @access  Public
+exports.getNewsDetailPage = asyncHandler(async (req, res) => {
+  const news = await News.findById(req.params.id);
+
+  if (!news) {
+    return res.status(404).render('error', {
+      title: 'News Not Found',
+      error: 'News article not found',
+    });
+  }
+
+  renderView(res, 'news-detail', { title: news.title, news });
 });
 

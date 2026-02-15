@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - E-commerce API</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="container">
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-error"><%= error %></div>
+        <% } %>
+
+<div class="card">
+    <h1>Market & Business News</h1>
+
+    <!-- Topic Filter -->
+    <div style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="/news" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem; <%= !currentTopic ? 'background: #333; color: #fff;' : '' %>">All</a>
+        <% const topics = [
+            { value: 'share-market', label: 'Share Market' },
+            { value: 'stocks', label: 'Stocks' },
+            { value: 'ipo', label: 'IPO' },
+            { value: 'mutual-funds', label: 'Mutual Funds' },
+            { value: 'crypto', label: 'Crypto' },
+            { value: 'startup', label: 'Startup' },
+            { value: 'economy', label: 'Economy' },
+            { value: 'finance', label: 'Finance' },
+            { value: 'business', label: 'Business' },
+            { value: 'technology', label: 'Technology' },
+        ]; %>
+        <% topics.forEach(t => { %>
+            <a href="/news?topic=<%= t.value %>" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem; <%= currentTopic === t.value ? 'background: #333; color: #fff;' : '' %>"><%= t.label %></a>
+        <% }) %>
+    </div>
+
+    <% if (newsList && newsList.length > 0) { %>
+        <div class="news-list">
+            <% newsList.forEach(news => { %>
+                <div style="border: 1px solid #ddd; padding: 1.25rem; margin-bottom: 1rem; border-radius: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                        <div style="flex: 1;">
+                            <div style="margin-bottom: 0.5rem;">
+                                <span style="background: #2563eb; color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold;"><%= news.category %></span>
+                                <span style="background: #e0e0e0; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 0.25rem;"><%= news.topic %></span>
+                            </div>
+                            <h3 style="margin: 0 0 0.5rem 0;">
+                                <a href="/news/<%= news._id %>" style="text-decoration: none; color: inherit;"><%= news.title %></a>
+                            </h3>
+                            <% if (news.summary) { %>
+                            <p style="color: #555; font-size: 0.95rem; margin: 0 0 0.75rem 0;">
+                                <%= news.summary.length > 200 ? news.summary.substring(0, 200) + '...' : news.summary %>
+                            </p>
+                            <% } %>
+                            <div style="color: #888; font-size: 0.8rem;">
+                                <span><%= new Date(news.publishedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %></span>
+                                <% if (news.source) { %>
+                                    <span> | <%= news.source %></span>
+                                <% } %>
+                            </div>
+                        </div>
+                        <% if (news.imageUrl) { %>
+                            <img src="<%= news.imageUrl %>" alt="" style="width: 120px; height: 80px; object-fit: cover; border-radius: 4px;">
+                        <% } %>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <p>No news found. Use the API to add news.</p>
+    <% } %>
+</div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/main.js"></script>
+</body>
+</html>

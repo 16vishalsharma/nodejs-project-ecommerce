@@ -1,113 +1,92 @@
-const cluster = require('cluster');
-const os = require('os');
+const express = require('express');
+const cors = require('cors');
+const methodOverride = require('method-override');
+const session = require('express-session');
+const path = require('path');
+require('dotenv').config();
 
-const numCPUs = os.cpus().length;
+// Import database connection
+const connectDB = require('./config/database');
 
-if (cluster.isPrimary) {
-  console.log(`Primary process ${process.pid} is running`);
-  console.log(`Forking ${numCPUs} workers...`);
+// Import routes
+const routes = require('./routes');
+const viewRoutes = require('./routes/viewRoutes');
+const authRoutes = require('./routes/authRoutes');
+const uploadRoutes = require('./routes/uploadRoutes');
 
-  // Fork workers for each CPU core
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
+// Import URL controller for redirect route
+const { redirectUrl } = require('./controllers/urlController');
 
-  // Handle worker exit and restart
-  cluster.on('exit', (worker, code, signal) => {
-    console.log(`Worker ${worker.process.pid} died (${signal || code}). Restarting...`);
-    cluster.fork();
-  });
+// Import middleware
+const errorHandler = require('./middleware/errorHandler');
+const { getCurrentUser } = require('./middleware/auth');
 
-  // Log when worker comes online
-  cluster.on('online', (worker) => {
-    console.log(`Worker ${worker.process.pid} is online`);
-  });
+// Initialize Express app
+const app = express();
 
-} else {
-  // Workers run the Express app
-  const express = require('express');
-  const methodOverride = require('method-override');
-  const session = require('express-session');
-  const path = require('path');
-  require('dotenv').config();
+// Connect to MongoDB
+connectDB();
 
-  // Import database connection
-  const connectDB = require('./config/database');
+// View Engine Setup
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
-  // Import routes
-  const routes = require('./routes');
-  const viewRoutes = require('./routes/viewRoutes');
-  const authRoutes = require('./routes/authRoutes');
-  const uploadRoutes = require('./routes/uploadRoutes');
+// CORS - allow frontend to call API
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  credentials: true,
+}));
 
-  // Import URL controller for redirect route
-  const { redirectUrl } = require('./controllers/urlController');
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
-  // Import middleware
-  const errorHandler = require('./middleware/errorHandler');
-  const { getCurrentUser } = require('./middleware/auth');
+// Static Files
+app.use(express.static('public'));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-  // Initialize Express app
-  const app = express();
+// Session Configuration
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000,
+  },
+}));
 
-  // Connect to MongoDB
-  connectDB();
+// Middleware to make session available in all views
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  next();
+});
 
-  // View Engine Setup
-  app.set('view engine', 'ejs');
-  app.set('views', './views');
+// Apply getCurrentUser middleware globally
+app.use(getCurrentUser);
 
-  // Static Files
-  app.use(express.static('public'));
-  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// URL Shortener redirect route (for /s/:shortCode) - Public
+app.get('/s/:shortCode', redirectUrl);
 
-  // Session Configuration
-  app.use(session({
-    secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: process.env.NODE_ENV === 'production',
-      httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000,
-    },
-  }));
+// Auth Routes (Login, Signup, Logout) - Must be before API routes
+app.use('/', authRoutes);
 
-  // Middleware to make session available in all views
-  app.use((req, res, next) => {
-    res.locals.session = req.session;
-    next();
-  });
+// Upload Routes
+app.use('/upload', uploadRoutes);
 
-  // Middleware
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
-  app.use(methodOverride('_method'));
+// View Routes (Server-Side Rendering)
+app.use('/', viewRoutes);
 
-  // Apply getCurrentUser middleware globally
-  app.use(getCurrentUser);
+// API Routes
+app.use('/api', routes);
 
-  // URL Shortener redirect route (for /s/:shortCode) - Public
-  app.get('/s/:shortCode', redirectUrl);
+// Error Handler Middleware (must be last)
+app.use(errorHandler);
 
-  // Auth Routes (Login, Signup, Logout) - Must be before API routes
-  app.use('/', authRoutes);
-
-  // Upload Routes
-  app.use('/upload', uploadRoutes);
-
-  // View Routes (Server-Side Rendering)
-  app.use('/', viewRoutes);
-
-  // API Routes
-  app.use('/api', routes);
-
-  // Error Handler Middleware (must be last)
-  app.use(errorHandler);
-
-  // Start server
-  const PORT = process.env.PORT || 5000;
-  app.listen(PORT, () => {
-    console.log(`Worker ${process.pid} running on port ${PORT}`);
-  });
-}
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

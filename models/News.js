@@ -86,6 +86,9 @@ const newsSchema = new mongoose.Schema({
   },
 });
 
+// Prevent duplicate news by title
+newsSchema.index({ title: 1 }, { unique: true });
+
 // Index for fast queries by topic and category
 newsSchema.index({ topic: 1, publishedAt: -1 });
 newsSchema.index({ category: 1, publishedAt: -1 });

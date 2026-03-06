@@ -7,7 +7,7 @@ const asyncHandler = require('../middleware/asyncHandler');
 exports.getAllNews = asyncHandler(async (req, res) => {
   const { topic, category, search, limit = 50, page = 1 } = req.query;
 
-  const query = {};
+  const query = { title: { $exists: true, $ne: '' }, summary: { $exists: true, $ne: '' } };
 
   if (topic) {
     query.topic = topic.toLowerCase();
@@ -83,7 +83,11 @@ exports.createBulkNews = asyncHandler(async (req, res) => {
     });
   }
 
-  const news = await News.insertMany(items);
+  const news = await News.insertMany(items, { ordered: false }).catch((err) => {
+    // Filter out duplicate key errors, return successfully inserted docs
+    if (err.insertedDocs) return err.insertedDocs;
+    throw err;
+  });
 
   res.status(201).json({
     success: true,

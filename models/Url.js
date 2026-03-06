@@ -19,7 +19,6 @@ const urlSchema = new mongoose.Schema({
     unique: true,
     required: true,
     default: () => nanoid(8), // Generate 8-character short code
-    index: true,
   },
   shortUrl: {
     type: String,
@@ -72,7 +71,6 @@ urlSchema.pre('save', function (next) {
 });
 
 // Index for better query performance
-urlSchema.index({ shortCode: 1 });
 urlSchema.index({ createdAt: -1 });
 
 const Url = mongoose.model('Url', urlSchema);

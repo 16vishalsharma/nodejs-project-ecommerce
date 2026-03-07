@@ -76,11 +76,11 @@ app.use('/', authRoutes);
 // Upload Routes
 app.use('/upload', uploadRoutes);
 
+// API Routes (before view routes to avoid /api catch-all in viewRoutes)
+app.use('/api', routes);
+
 // View Routes (Server-Side Rendering)
 app.use('/', viewRoutes);
-
-// API Routes
-app.use('/api', routes);
 
 // Error Handler Middleware (must be last)
 app.use(errorHandler);

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/ecommerce';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/notify_db';
 
 const connectDB = async () => {
   try {

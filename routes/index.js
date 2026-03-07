@@ -8,6 +8,7 @@ const productRoutes = require('./productRoutes');
 const newsRoutes = require('./newsRoutes');
 const blogRoutes = require('./blogRoutes');
 const metalPriceRoutes = require('./metalPriceRoutes');
+const marketRoutes = require('./marketRoutes');
 
 // Mount routes
 router.use('/users', userRoutes);
@@ -16,6 +17,7 @@ router.use('/products', productRoutes);
 router.use('/news', newsRoutes);
 router.use('/blogs', blogRoutes);
 router.use('/metal-prices', metalPriceRoutes);
+router.use('/market', marketRoutes);
 
 // router.use('/categories', categoryRoutes);
 // router.use('/orders', orderRoutes);

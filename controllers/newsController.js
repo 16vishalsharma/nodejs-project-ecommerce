@@ -5,7 +5,7 @@ const asyncHandler = require('../middleware/asyncHandler');
 // @route   GET /api/news
 // @access  Public
 exports.getAllNews = asyncHandler(async (req, res) => {
-  const { topic, category, search, limit = 50, page = 1 } = req.query;
+  const { topic, category, search, limit = 10, page = 1 } = req.query;
 
   const query = { title: { $exists: true, $ne: '' }, summary: { $exists: true, $ne: '' } };
 

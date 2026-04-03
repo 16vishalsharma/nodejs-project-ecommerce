@@ -5,7 +5,7 @@ const asyncHandler = require('../middleware/asyncHandler');
 // @route   GET /api/news
 // @access  Public
 exports.getAllNews = asyncHandler(async (req, res) => {
-  const { topic, category, search, limit = 10, page = 1 } = req.query;
+  const { topic, category, search, limit = 10, page = 1, sort } = req.query;
 
   const query = { title: { $exists: true, $ne: '' }, summary: { $exists: true, $ne: '' } };
 
@@ -21,11 +21,21 @@ exports.getAllNews = asyncHandler(async (req, res) => {
     query.$text = { $search: search };
   }
 
+  // Parse sort param: "-publishedAt" = descending, "publishedAt" = ascending
+  let sortObj = { publishedAt: -1 };
+  if (sort) {
+    if (sort.startsWith('-')) {
+      sortObj = { [sort.substring(1)]: -1 };
+    } else {
+      sortObj = { [sort]: 1 };
+    }
+  }
+
   const skip = (parseInt(page) - 1) * parseInt(limit);
   const total = await News.countDocuments(query);
 
   const news = await News.find(query)
-    .sort({ publishedAt: -1 })
+    .sort(sortObj)
     .skip(skip)
     .limit(parseInt(limit));
 

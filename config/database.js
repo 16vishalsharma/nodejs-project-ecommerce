@@ -11,6 +11,7 @@ const connectDB = async () => {
   if (!cached.promise) {
     cached.promise = mongoose
       .connect(MONGODB_URI, {
+        dbName: process.env.MONGODB_DB_NAME || 'notify_db',
         bufferCommands: false,
         serverSelectionTimeoutMS: 10000,
       })

@@ -24,8 +24,15 @@ const { getCurrentUser } = require('./middleware/auth');
 // Initialize Express app
 const app = express();
 
-// Connect to MongoDB
-connectDB();
+// Ensure DB is connected before handling any request (serverless-safe)
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
 
 // View Engine Setup
 app.set('view engine', 'ejs');
@@ -85,8 +92,12 @@ app.use('/', viewRoutes);
 // Error Handler Middleware (must be last)
 app.use(errorHandler);
 
-// Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Start server only when not running in a serverless environment (e.g. Vercel)
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;

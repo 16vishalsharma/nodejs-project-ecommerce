@@ -3,16 +3,29 @@ require('dotenv').config();
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/notify_db';
 
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(MONGODB_URI);
+let cached = global._mongoose;
+if (!cached) cached = global._mongoose = { conn: null, promise: null };
 
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error('MongoDB connection error:', error);
-    process.exit(1);
+const connectDB = async () => {
+  if (cached.conn) return cached.conn;
+  if (!cached.promise) {
+    cached.promise = mongoose
+      .connect(MONGODB_URI, {
+        bufferCommands: false,
+        serverSelectionTimeoutMS: 10000,
+      })
+      .then((m) => {
+        console.log(`MongoDB Connected: ${m.connection.host}`);
+        return m;
+      });
   }
+  try {
+    cached.conn = await cached.promise;
+  } catch (err) {
+    cached.promise = null;
+    throw err;
+  }
+  return cached.conn;
 };
 
 module.exports = connectDB;
-

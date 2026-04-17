@@ -39,9 +39,25 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // CORS - allow frontend to call API
+// CORS_ORIGINS: comma-separated list of allowed origins (e.g. "https://app.example.com,https://admin.example.com")
+// Use "*" to allow all origins (disables credentials).
+const corsOrigins = (process.env.CORS_ORIGINS || 'http://localhost:3000,http://localhost:3001')
+  .split(',')
+  .map((o) => o.trim())
+  .filter(Boolean);
+
+const allowAllOrigins = corsOrigins.includes('*');
+
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001'],
-  credentials: true,
+  origin: allowAllOrigins
+    ? true
+    : (origin, cb) => {
+        // Allow same-origin / server-to-server requests (no Origin header)
+        if (!origin) return cb(null, true);
+        if (corsOrigins.includes(origin)) return cb(null, true);
+        return cb(new Error(`CORS: origin ${origin} not allowed`));
+      },
+  credentials: !allowAllOrigins,
 }));
 
 // Middleware

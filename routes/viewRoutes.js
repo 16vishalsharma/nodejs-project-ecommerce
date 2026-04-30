@@ -26,7 +26,7 @@ const {
 } = require('../controllers/viewController');
 const { isAuthenticated, getCurrentUser } = require('../middleware/auth');
 
-// Apply getCurrentUser middleware to all routes to make user available in views
+// Apply to all routes to make user available in views
 router.use(getCurrentUser);
 
 // Home route (public)
